@@ -17,3 +17,4 @@ file(GLOB PROJECT_SOURCES
 include_directories("include")
 
 add_executable(${PROJECT_NAME} main.cpp ${PROJECT_SOURCES})
+target_link_libraries(md5 ${CONAN_LIBS})
