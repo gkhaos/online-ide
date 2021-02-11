@@ -1,5 +1,9 @@
 tasks:
-  - init: python3 -m pip install conan
+  - init: python3 -m pip install conan && \
+          conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan && \
+          conan profile new default --detect && \
+          conan profile update settings.compiler.libcxx=libstdc++11 default
+
 
 vscode:
   extensions:

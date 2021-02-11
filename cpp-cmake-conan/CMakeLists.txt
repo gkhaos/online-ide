@@ -11,8 +11,9 @@ endif ()
 include_directories(CONAN_INCLUDE_DIRS_FMT)
 
 file(GLOB PROJECT_SOURCES
-    "${PROJECT_SOURCE_DIR}/include/*.hpp"
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
+
+include_directories("include")
 
 add_executable(${PROJECT_NAME} main.cpp ${PROJECT_SOURCES})
